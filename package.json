@@ -2,7 +2,7 @@
   "name": "cpptojslib",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "wrapper.js",
   "gypfile": true,
   "scripts": {
     "install": "node-gyp rebuild",

@@ -8,20 +8,18 @@ const hello = () => {
     return _hello();
 }
 
-getUrlsWithCallback('test1', (a) => {
-    console.log(a)
-})
+const callback = (a) => {
+    console.log(a);
+}
+
+getUrlsWithCallback('test1', callback);
 
 const asyncWrapper = async () => {
-    getUrlsWithPromise('test2').then(res => {
-        console.log(res)
-    })
-    // console.log(_promise)
+    const res = await getUrlsWithPromise('test2');
+    console.log(res);
 }
 
 asyncWrapper();
-
-console.log('finish')
 
 module.exports = {
     hello,
